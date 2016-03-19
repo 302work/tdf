@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<portable-config>
+    <!-- spring boot  -->
+    <config-file path="WEB-INF/classes/application.properties">
+        <replace key="spring.profiles.active">prod</replace>
+    </config-file>
+    <!-- beetl -->
+    <config-file path="WEB-INF/classes/beetl.properties">
+        <replace key="RESOURCE.autoCheck">false</replace>
+    </config-file>
+</portable-config>
