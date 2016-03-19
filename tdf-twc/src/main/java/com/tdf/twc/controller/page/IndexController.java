@@ -10,6 +10,6 @@ import com.tdf.core.controller.BaseController;
 public class IndexController extends BaseController{
 
     public void index(){
-
+        //方法
     }
 }
