@@ -1,0 +1,288 @@
+{
+"$entityCount":18,
+"$data":[{
+    "checkId":"check1",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check11",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check12",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check2",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check21",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check22",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check3",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check31",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check32",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check33",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check34",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check35",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check36",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check37",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check38",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check39",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check310",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check4",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check41",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check42",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check5",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check51",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check52",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check6",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check61",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check62",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check63",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check64",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check65",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check66",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check67",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check68",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check69",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check610",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check7",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check71",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check72",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check8",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check81",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check82",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check9",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check91",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check92",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check93",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check94",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check95",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check96",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check97",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check98",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check99",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check910",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check10",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check101",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check102",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check011",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check111",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check112",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+},{
+    "checkId":"check012",
+    "label": "首页",
+    "checked": false,
+    "children":[{
+            "checkId":"check121",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check122",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check123",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check124",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check125",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check126",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check127",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check128",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check129",
+            "label": "菜单菜单",
+            "checked": false
+        },{
+            "checkId":"check1210",
+            "label": "菜单菜单",
+            "checked": false
+        }]
+}]
+}

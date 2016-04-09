@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+
+	<!-- 各自页面head -->
+	${headContent}
+
+	<!-- 公用样式和js -->
+	<% include("_style.html"){} %>
+
+	<!-- 各自页面样式和公用js -->
+	${styleContent!}
+</head>
+
+<body>
+	<div class="v-box">
+		<!-- 公用头 -->
+		<% include("_header.html"){} %>
+		<div class="flex-box">
+			<div class="h-box">
+				<!-- 侧边栏 -->
+				<% include("_siderbar.html"){} %>
+				<div class="flex-box content-box">
+					<div class="v-box">
+						<!--
+							<div class="box content-bar">
+                                顶部菜单 组织管理 授权管理 有
+                            </div>
+                            <div class="flex-box content">
+                             	中间区域
+							</div>
+						-->
+						<!-- 中间区域 -->
+						${layoutContent!}
+						<!-- 面包屑 -->
+						<% include("_crumbs.html"){} %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- 各页面JS -->
+${jsContent!}

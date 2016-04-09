@@ -1,0 +1,289 @@
+<%var headContent ={%>
+<title>一批次审核调剂</title>
+<%};%>
+
+<% styleContent ={%>
+
+
+<%};%>
+
+<% var jsContent= {%>
+<script type="text/javascript">
+    cola(function(model) {
+        // 表格
+        model.describe("pageItems", {
+            provider: {
+                url: "images/bmzzsh.json",
+                pageSize: 10
+            }
+        });
+        var searchFields = ["分派医院","派遣单位","最高学历","志愿一医院","志愿一专业"];
+        var options = ["=", "!=", ">", ">=", "<","<=","包含","介于","不包含","从属于"];
+        model.widgetConfig({
+            // 分页下拉
+            pages: {
+                $type: "select",
+                options: ["20", "50", "100"],
+                width:"50px"
+            },
+            // 表格
+            dataTable: {
+                $type: "table",
+                bind: "item in pageItems",
+                showHeader: true,
+                currentPageOnly: true,
+                columns: [{
+                    $type: "select",
+                    width: "60"
+                }, {
+                    bind: ".col1",
+                    caption: "编号",
+                    align: "center"
+                }, {
+                    bind: ".col2",
+                    caption: "姓名",
+                    align: "center"
+                }, {
+                    bind: ".col3",
+                    caption: "性别",
+                    align: "center"
+                }, {
+                    bind: ".col9",
+                    caption: "一批次医院",
+                    align: "center"
+                }, {
+                    bind: ".col16",
+                    caption: "成绩",
+                    align: "center"
+                }, {
+                    bind: ".col9",
+                    caption: "志愿一医院",
+                    align: "center"
+                }, {
+                    bind: ".col10",
+                    caption: "志愿一专业",
+                    align: "center"
+                }, {
+                    bind: ".col11",
+                    caption: "志愿二医院",
+                    align: "center"
+                }, {
+                    bind: ".col12",
+                    caption: "志愿二专业",
+                    align: "center"
+                }, {
+                    bind: ".col8",
+                    caption: "是否服从调剂",
+                    align: "center"
+                }, {
+                    bind: ".col13",
+                    caption: "调剂医院",
+                    align: "center"
+                }, {
+                    bind: ".col14",
+                    caption: "状态",
+                    align: "center",
+                    template:"ypclq"
+
+                }]
+            },
+            filter1: {
+                $type: "select",
+                options: searchFields
+            },
+            filter2: {
+                $type: "select",
+                options: searchFields
+            },
+            filter3: {
+                $type: "select",
+                options: searchFields
+            },
+            filter4: {
+                $type: "select",
+                options: searchFields
+            },
+            filter5: {
+                $type: "select",
+                options: searchFields
+            },
+            filter6: {
+                $type: "select",
+                options: searchFields
+            },
+            operator1: {
+                $type: "select",
+                options: options
+            },
+            operator2: {
+                $type: "select",
+                options: options
+            },
+            operator3: {
+                $type: "select",
+                options: options
+            },
+            operator4: {
+                $type: "select",
+                options: options
+            },
+            operator5: {
+                $type: "select",
+                options: options
+            },
+            operator6: {
+                $type: "select",
+                options: options
+            },
+            andOr1: {
+                $type: "select",
+                options: ["并且", "或者"]
+            },
+            andOr2: {
+                $type: "select",
+                options: ["并且", "或者"]
+            },
+            andOr3: {
+                $type: "select",
+                options: ["并且", "或者"]
+            },
+            andOr4: {
+                $type: "select",
+                options: ["并且", "或者"]
+            },
+            andOr5: {
+                $type: "select",
+                options: ["并且", "或者"]
+            },
+            myQuery: {
+                $type: "select",
+                options: ["我的查询", "我的查询", "我的查询"]
+            }
+        });
+        // 搜索菜单
+        $('#searchBtn').on('click',function(){
+            if ($(this).hasClass('active')) {
+                $('.search-bar').hide();
+                $(this).removeClass('active')
+            }else{
+                $('.search-bar').show();
+                $(this).addClass('active')
+            }
+        })
+    });
+</script>
+
+<% }; %>
+
+
+<% layout("./common/_layout.html",{headContent:headContent,styleContent:styleContent,jsContent:jsContent}){%>
+<div class="box content-bar header-menu">
+    <div class="fl-left">
+        <div c-widget="button;">未审核</div>
+        <div c-widget="button;">未分派</div>
+        <div c-widget="button;">已审核</div>
+        <div c-widget="button;">已分派</div>
+        <div c-widget="button;">调剂</div>
+        <div c-widget="menuButton; caption:其他">
+            <div c-widget="Menu"><a class="item">Google</a><a class="item">Bing</a><a class="item">BaiDu</a><a class="item">SouGou</a>
+            </div>
+            <i class="dropdown icon"></i>
+        </div>
+        <div c-widget="button;" id="searchBtn">搜索</div>
+    </div>
+    <div class="fl-right">
+        <div c-widget="button;icon:wait">批量审核</div>
+        <div c-widget="button;icon:sitemap">批量分派</div>
+        <div c-widget="button;icon:file excel outline">导出</div>
+    </div>
+</div>
+<div class="flex-box content tree-org">
+    <div class="v-box">
+        <div class="box content-bar search-bar">
+            <div class="ui form">
+                <div class="fields three">
+                    <div class="field">
+                        <div>
+                            <label style="width: 15%;">第一组</label>
+                            <div id="filter1" style="width: 20%;"></div>
+                            <div id="operator1" style="width: 15%;"></div>
+                            <div c-widget="Input" style="width: 45%;"></div>
+                        </div>
+                        <div>
+                            <div id="andOr2" style="width: 15%;"></div>
+                            <div id="filter2" style="width: 20%;"></div>
+                            <div id="operator2" style="width: 15%;"></div>
+                            <div c-widget="Input" style="width: 45%;"></div>
+                        </div>
+                        <div>
+                            <div id="andOr3" style="width: 15%;"></div>
+                            <div id="filter3" style="width: 20%;"></div>
+                            <div id="operator3" style="width: 15%;"></div>
+                            <div c-widget="Input" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                    <div class="field one wide">
+                        <div>
+                            <div id="andOr1" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div>
+                            <label style="width: 15%;">第二组</label>
+                            <div id="filter4" style="width: 20%;"></div>
+                            <div id="operator4" style="width: 15%;"></div>
+                            <div c-widget="Input" style="width: 45%;"></div>
+                        </div>
+                        <div>
+                            <div id="andOr4" style="width: 15%;"></div>
+                            <div id="filter5" style="width: 20%;"></div>
+                            <div id="operator5" style="width: 15%;"></div>
+                            <div c-widget="Input" style="width: 45%;"></div>
+                        </div>
+                        <div>
+                            <div id="andOr5" style="width: 15%;"></div>
+                            <div id="filter6" style="width: 20%;"></div>
+                            <div id="operator6" style="width: 15%;"></div>
+                            <div c-widget="Input" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="search-button">
+                            <div c-widget="button;">搜索</div>
+                            <div c-widget="button;">重置</div>
+                            <div c-widget="button;">保存</div>
+                            <div id="myQuery" style="width: 85px;"></div>
+                            <div id="searchMore" c-widget="button; icon:angle double down;" class="fl-right"></div>
+                            <div id="searchClose" c-widget="button; icon:remove;" class="fl-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="h-box">
+                <div class="flex-box content-detail">
+                    <div class="v-box">
+                        <div class="flex-box">
+                            <div id="dataTable">
+                                <template name="ypclq">
+                                    一批次录取
+                                </template>
+                            </div>
+                        </div>
+                        <div class="box pager">
+                            <div c-widget="Pager; bind:pageItems">
+                                <a page-code="pages" class="item"></a>
+                                <div class="left menu">
+                                    <label>每页记录数</label>
+                                    <div id="pages" style="width: 85px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%};%>

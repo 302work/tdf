@@ -1,0 +1,10 @@
+<!-- 左侧菜单 START -->
+<div class="box sidebar">
+    <!-- <div c-widget="button; icon:caret left" class="switch"></div> -->
+    <div id="menuTree">
+        <template name="node-default">
+            <i c-classname="node.isDir ? 'icon setting' : 'icon setting'" ></i><span c-bind="node.title" c-onClick="goPage(node.url,node.id)"></span>
+        </template>
+    </div>
+</div>
+<!-- 左侧菜单 END -->

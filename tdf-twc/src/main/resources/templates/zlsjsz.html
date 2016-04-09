@@ -1,0 +1,78 @@
+<%var headContent ={%>
+<title>招录时间设置</title>
+<%};%>
+
+<% styleContent ={%>
+
+
+<%};%>
+
+<% var jsContent= {%>
+<script type="text/javascript">
+    cola(function(model) {
+        // 表格
+        model.describe("timeSetting", {
+            provider: {
+                url: "images/timeSetting.json",
+                pageSize: 10
+            }
+        });
+        model.widgetConfig({
+            // 表格
+            timeSettingTable: {
+                $type: "table",
+                bind: "item in timeSetting",
+                showHeader: true,
+                currentPageOnly: true,
+                selectedPropertybooleancola:false,
+                columnStrecthablebooleantruecola:true,
+                columns: [{
+                    $type: "select",
+                    width: "60"
+                }, {
+                    bind: ".name",
+                    caption: "名称",
+                    align: "center"
+                }, {
+                    bind: ".startDate",
+                    caption: "开始时间",
+                    align: "center"
+                }, {
+                    bind: ".endDate",
+                    caption: "结束时间",
+                    align: "center"
+                }]
+            }
+        });
+    });
+</script>
+
+<% }; %>
+
+
+<% layout("./common/_layout.html",{headContent:headContent,styleContent:styleContent,jsContent:jsContent}){%>
+<div class="box content-bar header-menu">
+    <div class="fl-left">
+        <div c-widget="button;icon:add circle">新建设置</div>
+        <div c-widget="button;icon:minus circle">删除设置</div>
+        <div c-widget="button;icon:pencil circle">编辑设置</div>
+    </div>
+</div>
+<div class="flex-box content tree-org">
+    <div class="v-box">
+        <div class="flex-box">
+            <div class="h-box">
+                <div class="flex-box content-detail">
+                    <div class="v-box">
+                        <div class="flex-box">
+                            <div id="timeSettingTable">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%};%>
