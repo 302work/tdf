@@ -4,13 +4,8 @@ import com.alibaba.druid.filter.stat.StatFilter;
 import com.season.config.*;
 import com.season.core.db.tx.TxByRegex;
 import com.season.core.spring.SeasonApplication;
-import com.season.interceptor.ExceptionInterceptor;
-import com.season.plugin.redis.RedisPlugin;
-import com.season.render.ActionExceptionRender;
-import com.season.render.PageExceptionRender;
 import com.tdf.core.cache.DefaultCacheImpl;
 import com.tdf.core.cache.ICache;
-import com.tdf.core.exception.PageException;
 import com.tdf.core.handler.ContextHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -38,20 +33,20 @@ public class TDFApp extends SeasonApplication {
     }
 
     public void configPlugin(Plugins me) {
-        me.add(new RedisPlugin());
+//        me.add(new RedisPlugin());
     }
 
     public void configInterceptor(Interceptors me){
         //构建出错拦截器
-        ExceptionInterceptor exceptionInterceptor = new ExceptionInterceptor();
+//        ExceptionInterceptor exceptionInterceptor = new ExceptionInterceptor();
+//
+//        //默认所有异常都走MyExceptionRender处理
+//        exceptionInterceptor.setDefault(new ActionExceptionRender("系统内部错误,请稍后再试!"));
+//
+//        //对于DbException异常，走MyExceptionRender（你可以自己写自己的） 处理，可以添加多个
+//        exceptionInterceptor.addMapping(PageException.class,new PageExceptionRender(constantsProperties.getError500View()));
 
-        //默认所有异常都走MyExceptionRender处理
-        exceptionInterceptor.setDefault(new ActionExceptionRender("系统内部错误,请稍后再试!"));
-
-        //对于DbException异常，走MyExceptionRender（你可以自己写自己的） 处理，可以添加多个
-        exceptionInterceptor.addMapping(PageException.class,new PageExceptionRender(constantsProperties.getError500View()));
-
-        me.addGlobalActionInterceptor(exceptionInterceptor);
+//        me.addGlobalActionInterceptor(exceptionInterceptor);
 
         me.addGlobalActionInterceptor(new TxByRegex(
                 ".*save.*|.*update.*|.*delete.*|.*insert.*|.*add.*|.*remove.*|.*execute.*|.*audit.*|.*reset.*|.*commit.*"));
